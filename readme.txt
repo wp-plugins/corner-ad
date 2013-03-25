@@ -74,7 +74,7 @@ A floating panel will appear allowing the selection of the corner ad to be inser
 
 To insert an ad directly into the website theme to display it across all the pages or into specific sections, edit the template and insert the following code fragment:
 
-<?php echo do_shortcode('[corner-ad id=3]'); ?>
+&lt;?php echo do_shortcode('[corner-ad id=3]'); ?&gt;
 
 To identify the ID that belongs to each ad, go to the page in the settings area where the ads are created. On that list each ad has its shortcode with its ID.
 
