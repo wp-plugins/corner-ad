@@ -24,7 +24,7 @@
 		var swfLocation = corner_ad['url']+'/js/cornerAd.swf';		
         
 		// Big corner 
-		toPrint +='<div id="bigCorner" style="z-index:1000;position:absolute;left:0px; top:0px;">';
+		toPrint +='<div id="bigCorner" style="z-index:100000;position:absolute;left:0px; top:0px;">';
 		toPrint +='	<object  id="cornerAd" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="500" height="500">';
 	  toPrint +='		<param name="movie" value="'+swfLocation+'?'+attrStr+'imgPath='+imgPath+'&isBig=true" />';
 	  toPrint +='		<param name="quality" value="high" />';
@@ -35,7 +35,7 @@
 		toPrint +='</div>';
 		
 		// Short corner 
-		toPrint +='<div id="shortCorner" style="z-index:999;position:absolute;left:0px; top:0px;">';
+		toPrint +='<div id="shortCorner" style="z-index:99999;position:absolute;left:0px; top:0px;">';
 		toPrint +='	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="100" height="100">';
 	  toPrint +='		<param name="movie" value="'+swfLocation+'?'+attrStr+'imgPath='+thumbPath+'" />';
 	  toPrint +='		<param name="quality" value="high" />';
