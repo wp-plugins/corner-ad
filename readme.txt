@@ -1,7 +1,7 @@
 === Corner Ad ===
 Contributors: codepeople
 Donate link: http://wordpress.dwbooster.com/content-tools/corner-ad
-Tags: 
+Tags:ad,ads,advertising,promotion,advertiser,banner,menu,image,links,url,tracking
 Requires at least: 3.0.5
 Tested up to: 3.5.1
 Stable tag: 1.0.1
