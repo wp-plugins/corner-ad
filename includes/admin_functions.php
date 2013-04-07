@@ -215,7 +215,15 @@ if(!function_exists('corner_ad_settings_page_form')){
 									<td>';
         $output .= '                 <div>    
                                         <input type="text" name="corner_ad_imgPath" size="40" value="'.((!empty($corner_ad_imgPath)) ? esc_attr($corner_ad_imgPath) : '').'" /> <input type="button" class="corner_ad_button_for_upload button" value="'.__('Browse', CORNER_AD_TD).'" /> <input type="button" class="corner_ad_button_for_add_img_field button" value="Add another one" /> <input type="button" class="corner_ad_button_for_rmv_img_field button" value="Remove the image" DISABLED />
-                                    </div>';
+                                    </div>
+                                    <tr valign="top">
+									<th>'.__('Select an audio file to play in background', CORNER_AD_TD).'</th>
+									<td>
+										<input type="text" size="40" DISABLED /> <input type="button" value="'.__('Browse', CORNER_AD_TD).'" DISABLED />
+                                        The <a href="http://wordpress.dwbooster.com/content-tools/corner-ad" target="_blank">commercial version</a> of plugin allows to select an audio file to play in background.
+                                    </td>
+								</tr>
+                                ';
             
         $output .=   '              </td>
 								</tr>

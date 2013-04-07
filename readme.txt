@@ -22,6 +22,7 @@ Corner Ad is a minimally invasive advertising display that uses any of your webp
 * Allows the selection of which top corner area of the page (right or left) will be used to display the ad to avoid overwriting important elements like logos, menus or search features.
 * The target of the link can be selected, so it can open the new page in the same browser's window or into a new window.
 * Configurable background color for the ad to match the web page design.
+* Allow to select an audio file to play in background.
 * Automatic mirror effect.
 * Configurable time for automatic open and close actions.
 * Supports multiple ads into the same website (each ad in a different page)
@@ -60,6 +61,7 @@ The edition screen allows the configuration of the ad featuring the following op
 * Ad Link: Link to a page that will be opened when the user clicks on the ad.
 * Open Ad in: The options are "New page" to open the page in a new browser window or "Self Page" to keep the navigation in the same browser window.
 * Ad image: Address (URL) of the image that will be used for the ad. If you click the "Browse" button the WordPress media library will be opened to select one of the images already available in your WordPress website and you can also add new images there. It is possible to associate multiple images to the same Ad, the images will be randomly selected to display in page.
+* Ad audio: Address (URL) of audio file to play in background.
 * Set as mirror: Automatically enable the image mirror on the ad.
 * Use corner with color:  Applies a color to the ad cover.
 * Display Ad in corner:  For selecting which top corner (Left or Right) will be used to display the ad.
