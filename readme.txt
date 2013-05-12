@@ -1,7 +1,7 @@
 === Corner Ad ===
 Contributors: codepeople
 Donate link: http://wordpress.dwbooster.com/content-tools/corner-ad
-Tags:ad,ads,advertising,promotion,advertiser,banner,menu,image,links,url,tracking
+Tags:ad,ads,advertising,promotion,advertiser,banner,image,links,url,tracking
 Requires at least: 3.0.5
 Tested up to: 3.5.1
 Stable tag: 1.0.1
@@ -12,22 +12,44 @@ Corner Ad is a minimally invasive advertising display that uses any of your webp
 
 == Description ==
 
+
+Corner Ad features:
+
+	» Minimally invasive
+	» Display the ad at top corner area of the page
+	» The animation in the Corner Ad captures the user's attention
+	» It is possible to associate an image and an URL to the Corner Ad
+	» The target of the link can be selected
+	» Configurable background color for the ad to match the web page design
+	» Automatic mirror effect
+	» Configurable time for automatic open and close actions
+	
+
 **Corner Ad** is a minimally invasive advertising display that uses any of your webpage's top corners - a position typically under-utilized by developers - and attracts users' attention by a cool visual effect imitating a page flip. **Corner Ad** initially displays a partial ad, which attracts attention; when user hover the mouse over it, the ad opens to its full size while imitating a page-flip effect; once the mouse is moved away, the ad returns to its initial size.
 
 **Corner Ad** can also be used for announcements, newsflashes, and basically for anything else that you consider important and want your website visitors to see. It is common nowadays that visitors quickly scan the contents of a page and often fail to notice messages that you would like them to see; **Corner Ad** attempts to resolve this issue.
 
-**Features:**
+**More about the Main Features:**
 
 * Minimally invasive.
-* Allows the selection of which top corner area of the page (right or left) will be used to display the ad to avoid overwriting important elements like logos, menus or search features.
+* Display the ad at top corner area of the page.
 * The target of the link can be selected, so it can open the new page in the same browser's window or into a new window.
 * Configurable background color for the ad to match the web page design.
-* Allow to select an audio file to play in background.
-* Automatic mirror effect.
+* Automatic mirror effect
 * Configurable time for automatic open and close actions.
-* Supports multiple ads into the same website (each ad in a different page)
-* Count the number of click for Ads.
 * The corner ad effect is made using Flash.
+
+The base plugin, available for free from the WordPress Plugin Directory has all the features you need to create an audio and video player on your website.
+
+**Premium Features**
+
+* Supports multiple ads into the same website (each ad in a different page) to promote different products.
+* Allows the selection of which top corner area of the page (right or left) will be used to display the ad to avoid overwriting important elements like logos, menus or search features.
+* Count the number of click for Ads. The number of clicks on the ads, measures the impact of advertising on the web site's users.
+* Allows to associate multiple images to the same ad. The ad image is selected  randomly each time is loaded the page containing the Corner Ad.
+* Allows to associate a audio file to the advertising obtaining a bigger impact. The audio file will play in background.
+
+The "Corner Ad" is the perfect replacement of the old and invasive banners, the "Corner Ad" is small but its location and animation is able to capture the user's attention.
 
 Requirements: The browser must support Flash.
 
@@ -58,8 +80,8 @@ To create an ad go to the settings page under the menu "Settings > Corner Ad" or
 The edition screen allows the configuration of the ad featuring the following options:
 
 * Ad name: Name used to identify the ad in the list.
-* Ad Link: Link to a page that will be opened when the user clicks on the ad.
-* Open Ad in: The options are "New page" to open the page in a new browser window or "Self Page" to keep the navigation in the same browser window.
+* Ad Link: Link to a page that will be opened when the user clicks on the ad. The link must be an absolute URL if you are promoting an external website.
+* Open Ad in: The options are "New page", to open the page in a new browser window, or "Self Page", to keep the navigation in the same browser window.
 * Ad image: Address (URL) of the image that will be used for the ad. If you click the "Browse" button the WordPress media library will be opened to select one of the images already available in your WordPress website and you can also add new images there. It is possible to associate multiple images to the same Ad, the images will be randomly selected to display in page.
 * Ad audio: Address (URL) of audio file to play in background.
 * Set as mirror: Automatically enable the image mirror on the ad.
