@@ -14,27 +14,16 @@
 		var corner_ad_img_path_field;
 		window["corner_ad_send_to_editor_default"] = window.send_to_editor;
 		
-        if(!jQuery['live']) jQuery['live'] = jQuery['on'];
-        
-		jQuery('.corner_ad_button_for_upload').live('click', function(){
+        jQuery('.corner_ad_button_for_upload').click(function(){
 			corner_ad_img_path_field = jQuery(this).parent().find('[name="corner_ad_imgPath"]');
 			window.send_to_editor = window.corner_ad_send_to_download_url;
 			tb_show('', 'media-upload.php?TB_iframe=true');
 			return false;
 		});
         
-        jQuery('.corner_ad_button_for_add_img_field').live('click', function(){
+        jQuery('.corner_ad_button_for_add_img_field').click(function(){
             alert('Only one image may be associated to the Ad in the free version of plugin');
 			return false;
 		});
-        
-        jQuery('.corner_ad_button_for_upload').live('click', function(){
-            corner_ad_img_path_field = $(this).parent().find('input[type="text"]');
-			window.send_to_editor = window.corner_ad_send_to_download_url;
-			tb_show('', 'media-upload.php?TB_iframe=true');
-			return false;
-		});
-		
-		
-	})(jQuery)
+    })(jQuery)
 })
