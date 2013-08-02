@@ -67,7 +67,8 @@ if(!function_exists('corner_ad_init')){
     function corner_ad_init(){
         // Set the add shortcode
         add_shortcode('corner-ad', 'corner_ad_replace_shortcode');
-        
+        add_image_size( 'corner_ad_thumb', 100, 100, true );
+        add_image_size( 'corner_ad', 500, 500, true );
     } // End corner_ad_init
 }
 
@@ -167,7 +168,7 @@ if(!function_exists('corner_ad_replace_shortcode')){
                 $row = $wpdb->get_row($wpdb->prepare("SELECT imgPath FROM ".$wpdb->prefix.CORNER_AD_IMG_TABLE." WHERE ad=%d", $ad->id));
 
                 if($row){
-                    $img = corner_ad_get_images($row->imgPath);
+                    $img = corner_ad_get_images($row->imgPath, true);
                 }
 
                 $colorIn = ($ad->colorIn[0] == '#') ?  substr($ad->colorIn, 1) : $ad->colorIn;

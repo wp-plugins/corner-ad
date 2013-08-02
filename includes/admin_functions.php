@@ -90,6 +90,20 @@ if(!function_exists('corner_ad_settings_page_form')){
                 $corner_ad_closeIn = (isset($_POST['corner_ad_closeIn'])) ? $_POST['corner_ad_closeIn']  : 0;
                 if(!empty($_POST['corner_ad_imgPath'])){
                     $corner_ad_imgPath = $_POST['corner_ad_imgPath'];
+                    
+                    $info = corner_ad_get_images( $corner_ad_imgPath );
+                    if( isset( $info->id ) ){
+                        $img_obj = wp_get_image_editor( $info->url );
+                        if( !is_wp_error( $img_obj ) ){
+                            $imgSize   = $img_obj->get_size();
+                            $size = min($imgSize['height'], $imgSize['width'], 500);
+                            add_image_size( 'corner_ad', $size, $size, true );    
+                        }
+    
+                        $info->file = get_attached_file($info->id);
+                        wp_update_attachment_metadata( $info->id, wp_generate_attachment_metadata( $info->id, $info->file ) );
+                    }    
+                    
                 }else{
                     $error[] = __('The Ad image is required', CORNER_AD_TD);
                 }    
@@ -278,25 +292,35 @@ if(!function_exists('corner_ad_settings_page_form')){
 }
 
 if (!function_exists('corner_ad_get_images')){
-    function corner_ad_get_images($url){
+    function corner_ad_get_images($url, $to_show = false ){
         global $wpdb;
         $img = new stdClass;
-        
+
         $img->thumb_url = $url;
         $img->url = $url;
 
         if(preg_match('/attachment_id=(\d+)/', $url, $matches)){
-            $img->thumb_url = wp_get_attachment_thumb_url( $matches[1] );
-            $resized = wp_get_attachment_image_src( $matches[1], 'large' );
+            $img->id = $matches[1];
+            if($to_show){ 
+                $resized = wp_get_attachment_image_src( $matches[1], 'corner_ad_thumb' );
+                $img->thumb_url = $resized[0];
+            }
+            $resized = wp_get_attachment_image_src( $matches[1], ( ( $to_show ) ? 'corner_ad' : 'large' ) );
             $img->url = $resized[0];
         }else{
             $id = $wpdb->get_var($wpdb->prepare("SELECT id FROM ".$wpdb->prefix."posts WHERE guid='%s'", $url));
-            $img->thumb_url = wp_get_attachment_thumb_url( $id );
-            $resized = wp_get_attachment_image_src( $id, 'large' );
-            $img->url = $resized[0];
+            if($id){
+                $img->id = $id;
+                if( $to_show ){ 
+                    $resized = wp_get_attachment_image_src( $id, 'corner_ad_thumb' );
+                    $img->thumb_url = $resized[0];
+                }
+                $resized = wp_get_attachment_image_src( $id, ( ( $to_show ) ? 'corner_ad' : 'large' ) );
+                $img->url = $resized[0];
+            }    
         }
-
         return $img;
     } // End corner_ad_get_images
 }
+
 ?>
