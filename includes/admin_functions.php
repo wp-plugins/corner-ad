@@ -9,7 +9,8 @@ if(!function_exists('corner_ad_settings_page_list')){
         
         $output = '<div class="postbox">
                         <h3 class="handle" style="padding:5px;"><span>'.__('Select a Corner Ad or create a new one', CORNER_AD_TD).'</span></h3>
-                            <div class="inside">';
+                            <div class="inside"><p  style="border:1px solid #E6DB55;margin-bottom:10px;padding:5px;background-color: #FFFFE0;">'.__('If you want test the premium version of Corner Ad go to the following links:<br/> <a href="http://www.dreamweaverdownloads.com/demos/corner-ad/wp-login.php" target="_blank">Administration area: Click to access the administration area demo</a><br/> <a href="http://www.dreamweaverdownloads.com/demos/corner-ad/" target="_blank">Public page: Click to access the Corner Ad</a>').'
+					</p>';
         
         if($ad){
             $create_btn = '<div><input type="button" class="button-primary" onclick="alert(\'Only one Ad may be created in the free version of plugin\')" value="'.__('Create New Ad', CORNER_AD_TD).'" /></div>';
