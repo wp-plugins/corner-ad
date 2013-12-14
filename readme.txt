@@ -3,7 +3,7 @@ Contributors: codepeople
 Donate link: http://wordpress.dwbooster.com/content-tools/corner-ad
 Tags:ad,ads,advertising,promotion,advertiser,banner,image,links,url,tracking
 Requires at least: 3.0.5
-Tested up to: 3.7.1
+Tested up to: 3.8
 Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,13 @@ The base plugin, available for free from the WordPress Plugin Directory has all 
 * Allows to associate a audio file to the advertising obtaining a bigger impact. The audio file will play in background.
 
 The "Corner Ad" is the perfect replacement of the old and invasive banners, the "Corner Ad" is small but its location and animation is able to capture the user's attention.
+
+**Demo of Premium Version of Plugin**
+
+[http://www.dreamweaverdownloads.com/demos/corner-ad/wp-login.php](http://www.dreamweaverdownloads.com/demos/corner-ad/wp-login.php "Click to access the Administration Area demo")
+
+[http://www.dreamweaverdownloads.com/demos/corner-ad/](http://www.dreamweaverdownloads.com/demos/corner-ad/ "Click to access the Public Page")
+
 
 Requirements: The browser must support Flash.
 
