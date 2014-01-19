@@ -53,9 +53,9 @@ The "Corner Ad" is the perfect replacement of the old and invasive banners, the 
 
 **Demo of Premium Version of Plugin**
 
-[http://www.dreamweaverdownloads.com/demos/corner-ad/wp-login.php](http://www.dreamweaverdownloads.com/demos/corner-ad/wp-login.php "Click to access the Administration Area demo")
+[http://demos.net-factor.com/corner-ad/wp-login.php](http://demos.net-factor.com/corner-ad/wp-login.php "Click to access the Administration Area demo")
 
-[http://www.dreamweaverdownloads.com/demos/corner-ad/](http://www.dreamweaverdownloads.com/demos/corner-ad/ "Click to access the Public Page")
+[http://demos.net-factor.com/corner-ad/](http://demos.net-factor.com/corner-ad/ "Click to access the Public Page")
 
 
 Requirements: The browser must support Flash.
