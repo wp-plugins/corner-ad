@@ -1,23 +1,26 @@
 ﻿jQuery(function(){
 	(function($){
-        window["corner_ad_send_to_download_url"] = function(html) {
-			var file_url = jQuery(html).attr('href');
-			if (file_url) {
-				jQuery(corner_ad_img_path_field).val(file_url);
-			}
-			tb_remove();
-			window.send_to_editor = window.corner_ad_send_to_editor_default;
-
-		}
-        
-		// Main application
-		var corner_ad_img_path_field;
-		window["corner_ad_send_to_editor_default"] = window.send_to_editor;
-		
-        jQuery('.corner_ad_button_for_upload').click(function(){
-			corner_ad_img_path_field = jQuery(this).parent().find('[name="corner_ad_imgPath"]');
-			window.send_to_editor = window.corner_ad_send_to_download_url;
-			tb_show('', 'media-upload.php?TB_iframe=true');
+        // Main application
+		jQuery('.corner_ad_button_for_upload').click(function(){
+			var corner_ad_img_path_field = jQuery(this).parent().find('[name="corner_ad_imgPath"]');
+			var media = wp.media({
+					title: 'Select Media File',
+					library:{
+						type: 'image'
+					},
+					button: {
+					text: 'Select Item'
+					},
+					multiple: false
+			}).on('select', 
+				(function( field ){
+					return function() {
+						var attachment = media.state().get('selection').first().toJSON();
+						var url = attachment.url;
+						field.val( url );
+					};
+				})( corner_ad_img_path_field )	
+			).open();
 			return false;
 		});
         
