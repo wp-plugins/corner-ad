@@ -116,6 +116,7 @@ if(!function_exists('corner_ad_settings_menu')){
 if(!function_exists('corner_ad_settings_page')){
     function corner_ad_settings_page(){
         global $wpdb;
+		wp_enqueue_media();
 ?>
         <div class="wrap">
             <h2><?php _e('Corner Ad', CORNER_AD_TD); ?></h2>
