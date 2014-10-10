@@ -1,7 +1,7 @@
 === Corner Ad ===
 Contributors: codepeople
 Donate link: http://wordpress.dwbooster.com/content-tools/corner-ad
-Tags:ad,ads,advertising,promotion,advertiser,banner,image,links,url,tracking
+Tags:ad,ads,advertising,promotion,advertiser,banner,image,links,url,tracking,images,audio,admin,posts,Post,page,plugin,shortcode
 Requires at least: 3.0.5
 Tested up to: 4.0
 Stable tag: 1.0.1
@@ -129,3 +129,16 @@ A: The Corner Ad uses flash technologies, so it will be loaded only by mobiles w
 7. Corner Ad Insertion Interface
 8. Sales Reports
 9. Shortcode of Corner Ad with the Corresponding ID
+
+== Changelog ==
+
+= 1.0 =
+
+* First version released.
+
+= 1.0.1 =
+
+* Improves the plugin documentation.
+* Increase the z-index assigned to the corner ad, to solve an issue with the headers in some themes.
+* Allows the use of new versions of jQuery framework, include with the latest updates of WordPress.
+* Crop the images used in the corner ad in square size.
