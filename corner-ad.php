@@ -22,7 +22,7 @@ include CORNER_AD_PLUGIN_DIR.'/includes/admin_functions.php';
 */
 register_activation_hook( __FILE__, 'corner_ad_install' );
 if(!function_exists('corner_ad_install')){        
-	function corner_ad_install() {
+	function _corner_ad_install() {
         global $wpdb;
         
         // Create related table
@@ -56,8 +56,44 @@ if(!function_exists('corner_ad_install')){
         
         // Set the image size required by the corner_ad 
         //add_image_size( 'corner_ad', 300, 300, true );
+    } // End +corner_ad_install
+	
+	function corner_ad_install( $network_wide ) {
+		global $wpdb;	
+		if( function_exists( 'is_multisite' ) && is_multisite() ) 
+		{
+			// check if it is a network activation - if so, run the activation function for each blog id
+			if ($network_wide) 
+			{
+	            $current_blog = $wpdb->blogid;
+				// Get all blog ids
+				$blog_ids = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs" );
+				foreach ( $blog_ids as $blog_id ) 
+				{
+					switch_to_blog( $blog_id );
+					_corner_ad_install();
+				}
+				switch_to_blog( $current_blog );
+				return;
+			}
+		}
+		_corner_ad_install();
     } // End corner_ad_install
 } // End plugin activation
+
+// A new blog has been created in a multisite WordPress
+add_action( 'wpmu_new_blog', 'corner_ad_new_blog', 10, 6);        
+ 
+function corner_ad_new_blog($blog_id, $user_id, $domain, $path, $site_id, $meta ) {
+    global $wpdb;
+	if ( is_plugin_active_for_network() ) 
+	{
+        $current_blog = $wpdb->blogid;
+        switch_to_blog( $blog_id );
+        _corner_ad_install();
+        switch_to_blog( $current_blog );
+    }
+}
 
 /*
 *   Plugin initializing
