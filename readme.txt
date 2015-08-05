@@ -4,7 +4,7 @@ Donate link: http://wordpress.dwbooster.com/content-tools/corner-ad
 Tags:ad,ads,advertising,promotion,advertiser,banner,image,links,url,tracking,images,audio,admin,posts,Post,page,plugin,shortcode
 Requires at least: 3.0.5
 Tested up to: 4.3
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,10 +115,6 @@ To identify the ID that belongs to each ad, go to the page in the settings area 
 
 A: The Corner Ad has square form, so it is recommended to use proportional images.
 
-= Q: Is the Corner Ad available for mobiles? =
-
-A: The Corner Ad uses flash technologies, so it will be loaded only by mobiles with support for flash applications, however even if a mobile doesn't supports flash, "Corner Ad" won't cause errors on the page.
-
 == Screenshots ==
 1. Corner Ad Preview
 2. Plugin Installation
@@ -142,3 +138,15 @@ A: The Corner Ad uses flash technologies, so it will be loaded only by mobiles w
 * Increase the z-index assigned to the corner ad, to solve an issue with the headers in some themes.
 * Allows the use of new versions of jQuery framework, include with the latest updates of WordPress.
 * Crop the images used in the corner ad in square size.
+
+= 1.0.2 =
+
+* Reimplementation of the Corner Ad. The new version uses SVG to extend the support to the mobiles devices.
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+
+* Reimplementation of the Corner Ad. The new version uses SVG to extend the support to the mobiles devices.
+
+Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
