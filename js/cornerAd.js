@@ -237,7 +237,7 @@
 				$( 'body' ).append( cornerContainer );
 			}
 			cornerContainer
-				.attr( 'style',  'position:absolute;width:100px;height:100px;top:0;'+( ( isLeft) ? 'left' : 'right' )+':0;' )
+				.attr( 'style',  'position:absolute;width:100px;height:100px;top:0;z-index:999999;'+( ( isLeft) ? 'left' : 'right' )+':0;' )
 				.html( '<div style="position:absolute;'+( ( isLeft ) ? 'left' : 'right' )+':0;"></div>' );
 			
 			// Create the SVG paper where generate the corner ad
