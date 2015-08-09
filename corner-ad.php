@@ -3,7 +3,7 @@
 Plugin Name: Corner Ad
 Plugin URI: http://wordpress.dwbooster.com/content-tools/music-store
 Description: Corner Ad is a minimally invasive advertising display that uses any of your webpage's top corners - a position typically under-utilized by developers - and attracts users' attention by a cool visual effect imitating a page flip
-Version: 1.0.2
+Version: 1.0.3
 Author: CodePeople
 Author URI: http://www.codepeople.net
 License: GPLv2
@@ -198,6 +198,7 @@ if(!function_exists('corner_ad_replace_shortcode')){
             $ad = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".$wpdb->prefix.CORNER_AD_TABLE." WHERE id=%d", $attr['id']));
             if($ad){
                 // Enqueue required files
+				wp_enqueue_script( 'jquery' );
                 wp_enqueue_script( 'corner_ad_raphael_script',  CORNER_AD_PLUGIN_URL.'/js/raphael-min.js');
                 wp_enqueue_script( 'corner_ad_public_script',  CORNER_AD_PLUGIN_URL.'/js/cornerAd.min.js', array( 'jquery', 'corner_ad_raphael_script' ));
                 
@@ -209,7 +210,7 @@ if(!function_exists('corner_ad_replace_shortcode')){
                 }
 
                 $colorIn = $ad->colorIn;
-                return "<script>jQuery( function(){printCornerAd({alignTo:'tl', mirror:".(($ad->mirror == 1) ? 'true' : 'false').", colorIn:'".$colorIn."', thumbPath:'".$img->thumb_url."', imgPath:'".$img->url."', adUrl:'".$ad->adURL."', openIn:".(($ad->openIn) ? $ad->openIn : -1).", closeIn:".(($ad->closeIn) ? $ad->closeIn : -1).", target:'".$ad->target."'});} );</script>";
+				return "<script>if(window.addEventListener){ window.addEventListener('load', function(){ printCornerAd({alignTo:'tl', mirror:".(($ad->mirror == 1) ? 'true' : 'false').", colorIn:'".$colorIn."', thumbPath:'".$img->thumb_url."', imgPath:'".$img->url."', adUrl:'".$ad->adURL."', openIn:".(($ad->openIn) ? $ad->openIn : -1).", closeIn:".(($ad->closeIn) ? $ad->closeIn : -1).", target:'".$ad->target."'}); }); }else{ window.attachEvent('onload', function(){ printCornerAd({alignTo:'tl', mirror:".(($ad->mirror == 1) ? 'true' : 'false').", colorIn:'".$colorIn."', thumbPath:'".$img->thumb_url."', imgPath:'".$img->url."', adUrl:'".$ad->adURL."', openIn:".(($ad->openIn) ? $ad->openIn : -1).", closeIn:".(($ad->closeIn) ? $ad->closeIn : -1).", target:'".$ad->target."'}); }); } </script>";
             }    
         }    
         

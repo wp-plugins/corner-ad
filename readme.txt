@@ -4,7 +4,7 @@ Donate link: http://wordpress.dwbooster.com/content-tools/corner-ad
 Tags:ad,ads,advertising,promotion,advertiser,banner,image,links,url,tracking,images,audio,admin,posts,Post,page,plugin,shortcode
 Requires at least: 3.0.5
 Tested up to: 4.3
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -143,10 +143,14 @@ A: The Corner Ad has square form, so it is recommended to use proportional image
 
 * Reimplementation of the Corner Ad. The new version uses SVG to extend the support to the mobiles devices.
 
+= 1.0.3 =
+
+* Loads the Corner Ad directly, and not through jQuery, to prevent an issue on web pages, where jQuery is loaded directly from a CDN server, and not from the website.
+
 == Upgrade Notice ==
 
-= 1.0.2 =
+= 1.0.3 =
 
-* Reimplementation of the Corner Ad. The new version uses SVG to extend the support to the mobiles devices.
+* Loads the Corner Ad directly, and not through jQuery, to prevent an issue on web pages, where jQuery is loaded directly from a CDN server, and not from the website.
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
