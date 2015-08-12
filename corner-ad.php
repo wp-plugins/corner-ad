@@ -3,7 +3,7 @@
 Plugin Name: Corner Ad
 Plugin URI: http://wordpress.dwbooster.com/content-tools/music-store
 Description: Corner Ad is a minimally invasive advertising display that uses any of your webpage's top corners - a position typically under-utilized by developers - and attracts users' attention by a cool visual effect imitating a page flip
-Version: 1.0.4
+Version: 1.0.5
 Author: CodePeople
 Author URI: http://www.codepeople.net
 License: GPLv2

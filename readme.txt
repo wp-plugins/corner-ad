@@ -4,7 +4,7 @@ Donate link: http://wordpress.dwbooster.com/content-tools/corner-ad
 Tags:ad,ads,advertising,promotion,advertiser,banner,image,links,url,tracking,images,audio,admin,posts,Post,page,plugin,shortcode
 Requires at least: 3.0.5
 Tested up to: 4.3
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -151,10 +151,14 @@ A: The Corner Ad has square form, so it is recommended to use proportional image
 
 * Modifies the z-index assigned to the Corner Ad.
 
+= 1.0.5 =
+
+* Modifies the styles assigned to the Corner Ad.
+
 == Upgrade Notice ==
 
-= 1.0.4 =
+= 1.0.5 =
 
-* Modifies the z-index assigned to the Corner Ad.
+* Modifies the styles assigned to the Corner Ad.
 
 Important note: If you are using the Professional version don't update via the WP dashboard but using your personal update link. Contact us if you need further information: http://wordpress.dwbooster.com/support
