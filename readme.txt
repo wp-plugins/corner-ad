@@ -115,6 +115,10 @@ To identify the ID that belongs to each ad, go to the page in the settings area 
 
 A: The Corner Ad has square form, so it is recommended to use proportional images.
 
+= Q: Is supported the plugin "Corner Ad" on mobiles? =
+
+A: Yes it is. From the version 1.0.5, the "Corner Ad" plugin was re-implemented, to replace Flash, as the base technology, by SVG, that is supported natively by the most popular browsers, even its mobile versions.
+
 == Screenshots ==
 1. Corner Ad Preview
 2. Plugin Installation
